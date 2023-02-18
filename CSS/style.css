@@ -1,10 +1,93 @@
 /* Link font */
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --color-background: #f1f1f1;
+    --color-title: #175cff;
+    --color-timer: #333;
+    --color-time: #172953;
+    --color-separator: #525763;
+    --color-borderButton: #ccc;
+    --color-textBtn: #fff;
+    --color-resetBtn: #F15D51;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 
     font-family: 'Inter Tight', sans-serif;
+}
+
+.container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 2rem;
+     padding-top: 3rem;
+     background-color: var(--color-background);
+     height: 100vh;
+}
+
+.container h1 {
+    color: var(--color-title);
+}
+
+.timer {
+    display: flex;
+    font-size: 55px;
+    font-weight: bold;
+    color: var(--color-timer);
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: var(--color-time);
+    min-width: 90px;
+}
+
+.separator {
+    padding: 0 10px;
+    color: var(--color-separator);
+}
+#milliseconds {
+    font-size: 30px;
+    color: var(--color-separator);
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid var(--color-borderButton);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão quando passa o mouse encima*/
+}
+
+#startBtn {
+    background-color: var(--color-title);   
+    color: var(--color-textBtn);
+}
+
+#pauseBtn, #resumeBtn {
+    display: none;
+}
+
+#resetBtn {
+    background-color: var(--color-resetBtn);   
+    color: var(--color-textBtn);
 }
